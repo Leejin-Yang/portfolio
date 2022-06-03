@@ -20,7 +20,6 @@ const Portfolio = () => {
         <div id='project' aria-label='hidden' />
         <section className={styles.mainSection}>
           <p className={styles.paragraph}>안녕하세요</p>
-          <img src='src/assets/images/1.jpeg' alt='1' />
         </section>
         <section className={styles.mainSection}>
           <p className={styles.paragraph}>반갑습니다</p>
