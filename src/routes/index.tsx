@@ -1,7 +1,6 @@
 import { Route, Routes } from 'react-router-dom';
 import { useMount } from 'react-use';
 import { useRecoilState } from 'recoil';
-import store from 'store';
 
 import { backgroundThemeMode, colorThemeMode } from 'states/theme';
 
@@ -13,11 +12,8 @@ const App = () => {
   const [colorTheme] = useRecoilState(colorThemeMode);
 
   useMount(() => {
-    const background = store.get('leejin.background.theme') || backgroundTheme;
-    const color = store.get('leejin.color.theme') || colorTheme;
-
-    document.documentElement.setAttribute('background-theme', background);
-    document.documentElement.setAttribute('color-theme', color);
+    document.documentElement.setAttribute('background-theme', backgroundTheme);
+    document.documentElement.setAttribute('color-theme', colorTheme);
   });
 
   return (
