@@ -1,5 +1,5 @@
 :root {
-  --color-background: #f8f9fa;
+  --color-background: #fffcee;
   --text1: #212529;
   --text2: #495057;
   --text3: #868e96;
@@ -25,7 +25,7 @@
 }
 
 :root[background-theme='light'] {
-  --color-background: #f8f9fa;
+  --color-background: #fffcee;
   --text1: #212529;
   --text2: #495057;
   --text3: #868e96;
@@ -66,12 +66,12 @@
 }
 
 :root[color-theme='green'] {
-  --primary: #3d4421;
+  --primary: #005947;
   --color-text: #ececec;
 }
 
 :root[color-theme='blue'] {
-  --primary: #769292;
+  --primary: #809ea8;
   --color-text: #212529;
 }
 

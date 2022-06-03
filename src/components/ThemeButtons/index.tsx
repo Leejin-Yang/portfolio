@@ -1,18 +1,18 @@
-import { MouseEvent, ReactNode } from 'react';
+import { MouseEvent } from 'react';
 import { useRecoilState } from 'recoil';
 import store from 'store';
-import cx from 'classnames';
 
 import { backgroundThemeMode } from 'states/theme';
 
-import styles from './themeButton.module.scss';
+import ColorButton from '../ColorButton';
+
+import styles from './colorButtons.module.scss';
 
 interface Props {
-  children: ReactNode;
-  theme: string;
+  border: boolean;
 }
 
-const ThemeButton = ({ children, theme }: Props) => {
+const ThemeButtons = ({ border }: Props) => {
   const [, setBackgroundTheme] = useRecoilState(backgroundThemeMode);
 
   const onClick = (e: MouseEvent<HTMLButtonElement>) => {
@@ -24,10 +24,12 @@ const ThemeButton = ({ children, theme }: Props) => {
   };
 
   return (
-    <button type='button' className={cx(styles.backgroundButton, styles[theme])} data-theme={theme} onClick={onClick}>
-      {children}
-    </button>
+    <div className={styles.colorButtons}>
+      <ColorButton color='light' onClick={onClick} border={border} />
+      <ColorButton color='dim' onClick={onClick} border={border} />
+      <ColorButton color='dark' onClick={onClick} border={border} />
+    </div>
   );
 };
 
-export default ThemeButton;
+export default ThemeButtons;

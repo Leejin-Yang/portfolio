@@ -1,7 +1,7 @@
 import { useNavigate } from 'react-router-dom';
 
-import ThemeButton from './ThemeButton';
-import ColorButton from './ColorButton';
+import ColorButtons from 'components/ColorButtons';
+import ThemeButtons from 'components/ThemeButtons';
 
 import styles from './themeSettingPage.module.scss';
 
@@ -26,19 +26,9 @@ const ThemeSettingPage = () => {
           </p>
         </div>
         <h2>색상</h2>
-        <div className={styles.colorButtons}>
-          <ColorButton color='orange' />
-          <ColorButton color='green' />
-          <ColorButton color='blue' />
-          <ColorButton color='yellow' />
-          <ColorButton color='pink' />
-        </div>
+        <ColorButtons border={false} />
         <h2>배경</h2>
-        <div className={styles.backgroundButtons}>
-          <ThemeButton theme='light'>Light</ThemeButton>
-          <ThemeButton theme='dim'>Dim</ThemeButton>
-          <ThemeButton theme='dark'>Dark</ThemeButton>
-        </div>
+        <ThemeButtons border />
       </section>
     </main>
   );

@@ -38,22 +38,8 @@
       line-height: 40px;
     }
 
-    .colorButtons,
-    .backgroundButtons {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      min-height: 100px;
-    }
-
-    .backgroundButtons {
-      button {
-        margin-right: 8px;
-      }
-
-      button:last-of-type {
-        margin: 0;
-      }
+    & > div {
+      height: 100px;
     }
 
     .navigate {

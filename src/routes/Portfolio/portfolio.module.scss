@@ -1,8 +1,131 @@
 @use '/src/styles/constants/colors';
+@use '/src/styles/mixins/responsive';
 
 .container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
   animation-name: slidein;
   animation-duration: 1s;
+
+  .header {
+    position: fixed;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 60px;
+    padding: 20px;
+    color: var(--color-text);
+    background: var(--primary);
+    transition: background 0.2s ease-in 0s;
+
+    .nav {
+      display: flex;
+
+      li {
+        padding: 0 4px;
+        font-size: 14px;
+      }
+
+      li:last-of-type {
+        padding: 0 0 0 4px;
+      }
+    }
+  }
+
+  .hidden {
+    width: 100%;
+    height: 60px;
+  }
+
+  .aside {
+    display: none;
+  }
+
+  .main {
+    position: relative;
+    max-width: 100%;
+    height: 100%;
+
+    .info {
+      width: 100%;
+      height: 150px;
+      padding: 20px;
+      border-bottom: 1px solid var(--border1);
+      transition: background 0.2s ease-in 0s;
+    }
+
+    .mainSection {
+      height: 500px;
+      padding: 20px;
+      border-bottom: 1px solid var(--border1);
+
+      p {
+        line-height: 1.6;
+      }
+
+      .yellow {
+        width: 100px;
+        height: 100px;
+        background-color: var(--primary);
+        transform: rotate(-5deg);
+        animation-name: tick;
+        animation-duration: 2s;
+        animation-iteration-count: infinite;
+      }
+    }
+
+    .mainSection:last-of-type {
+      border: none;
+    }
+  }
+
+  @include responsive.after(SD) {
+    display: grid;
+    grid-template-columns: 300px 3fr;
+
+    .header,
+    .hidden {
+      display: none;
+    }
+
+    .aside {
+      position: relative;
+      display: block;
+      width: 300px;
+      height: 100%;
+      padding: 20px;
+      font-size: 20px;
+      font-weight: 600;
+      color: var(--color-text);
+      background: var(--primary);
+      transition: background 0.2s ease-in 0s;
+
+      p {
+        line-height: 1.6;
+      }
+
+      .buttonsAside {
+        position: absolute;
+        bottom: 20px;
+        width: 260px;
+
+        & > div:first-of-type {
+          margin-bottom: 20px;
+        }
+      }
+    }
+
+    .main {
+      overflow-y: auto;
+
+      .info {
+        display: none;
+      }
+    }
+  }
 }
 
 @keyframes slidein {
@@ -17,40 +140,12 @@
   }
 }
 
-.border {
-  position: relative;
-  width: 500px;
-  height: 500px;
-  margin: 100px;
-  background-color: var(--color-background);
-  border: 1px solid var(--border1);
-
-  .yellow {
-    width: 100%;
-    height: 100%;
-    background-color: var(--primary);
+@keyframes tick {
+  0% {
     transform: rotate(-5deg);
-    animation-name: tick;
-    animation-duration: 2s;
-    animation-iteration-count: infinite;
   }
 
-  @keyframes tick {
-    0% {
-      transform: rotate(-5deg);
-    }
-
-    50% {
-      transform: rotate(5deg);
-    }
-  }
-
-  .text {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 100%;
-    height: 100%;
-    transform: translate(-50%, -50%);
+  50% {
+    transform: rotate(5deg);
   }
 }
