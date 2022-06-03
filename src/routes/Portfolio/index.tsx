@@ -1,43 +1,37 @@
+import { INFO } from 'assets/article';
+
 import Aside from './Aside';
+import Header from './Header';
 
 import styles from './portfolio.module.scss';
 
 const Portfolio = () => {
   return (
     <div className={styles.container}>
-      <header className={styles.header}>
-        <p>양이진 Yang Leejin</p>
-        <ul className={styles.nav}>
-          <li>
-            <a href='#about'>About</a>
-          </li>
-          <li>
-            <a href='#project'>Project</a>
-          </li>
-          <li>Theme</li>
-        </ul>
-      </header>
+      <Header />
       <div className={styles.hidden} aria-label='hidden' />
       <Aside />
       <main className={styles.main}>
         <div id='about' aria-label='hidden' />
         <section className={styles.info}>
-          <p>양이진 Yang Leejin</p>
+          <h1>{INFO.NAME}</h1>
+          <p className={styles.paragraph}>{INFO.INTRO}</p>
         </section>
         <div id='project' aria-label='hidden' />
         <section className={styles.mainSection}>
-          <p className={styles.text}>안녕하세요</p>
+          <p className={styles.paragraph}>안녕하세요</p>
+          <img src='src/assets/images/1.jpeg' alt='1' />
         </section>
         <section className={styles.mainSection}>
-          <p className={styles.text}>반갑습니다</p>
-        </section>
-        <section className={styles.mainSection}>
-          <div className={styles.yellow} />
-          <p className={styles.text}>죄송합니다</p>
+          <p className={styles.paragraph}>반갑습니다</p>
         </section>
         <section className={styles.mainSection}>
           <div className={styles.yellow} />
-          <p className={styles.text}>궁금하네요</p>
+          <p className={styles.paragraph}>죄송합니다</p>
+        </section>
+        <section className={styles.mainSection}>
+          <div className={styles.yellow} />
+          <p className={styles.paragraph}>궁금하네요</p>
         </section>
       </main>
     </div>

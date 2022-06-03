@@ -1,0 +1,60 @@
+@use '/src/styles/constants/colors';
+@use '/src/styles/mixins/responsive';
+
+.aside {
+  display: none;
+
+  @include responsive.after(SD) {
+    position: relative;
+    display: block;
+    height: 100%;
+    padding: 0 20px;
+    color: var(--color-text);
+    background: var(--primary);
+    transition: background 0.2s ease-in 0s;
+
+    h1 {
+      height: 80px;
+      font-size: 24px;
+      font-weight: 600;
+      line-height: 80px;
+    }
+
+    .intro {
+      font-size: 16px !important;
+      line-height: 1.6;
+    }
+
+    .contact {
+      margin-top: 40px;
+
+      a + a {
+        margin-left: 20px;
+      }
+
+      svg {
+        fill: var(--color-text);
+      }
+    }
+
+    .buttonsAside {
+      position: absolute;
+      bottom: 20px;
+      left: 50%;
+      width: 100%;
+      max-width: 300px;
+      padding: 0 20px;
+      transform: translateX(-50%);
+
+      & > div:first-of-type {
+        margin-bottom: 20px;
+      }
+    }
+  }
+
+  .main {
+    .info {
+      display: none;
+    }
+  }
+}

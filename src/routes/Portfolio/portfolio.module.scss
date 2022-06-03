@@ -5,79 +5,45 @@
   position: absolute;
   width: 100%;
   height: 100%;
-  animation-name: slidein;
-  animation-duration: 1s;
-
-  .header {
-    position: fixed;
-    top: 0 !important;
-    z-index: 2;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
-    height: 60px;
-    padding: 0 20px;
-    color: var(--color-text);
-    background: var(--primary);
-    transition: background 0.2s ease-in 0s;
-
-    .nav {
-      display: flex;
-
-      li {
-        padding: 0 4px;
-        font-size: 14px;
-      }
-
-      li:last-of-type {
-        padding: 0 0 0 4px;
-      }
-    }
-  }
 
   .hidden {
     width: 100%;
     height: 60px;
   }
 
-  .aside {
-    display: none;
-  }
-
   .main {
-    position: relative;
-    max-width: 100%;
-    height: 100%;
+    width: 100%;
     overflow-y: auto;
     scroll-behavior: smooth;
 
-    .info {
+    section {
       width: 100%;
-      height: 150px;
       padding: 20px;
       border-bottom: 1px solid var(--border1);
-      transition: background 0.2s ease-in 0s;
     }
 
-    .mainSection {
-      height: 500px;
-      padding: 20px;
-      border-bottom: 1px solid var(--border1);
+    .paragraph {
+      font-size: 14px;
+      line-height: 1.6;
+    }
 
-      p {
-        line-height: 1.6;
-      }
+    .info {
+      transition: background 0.2s ease-in 0s;
 
-      .yellow {
-        width: 100px;
-        height: 100px;
-        background-color: var(--primary);
-        transform: rotate(-5deg);
-        animation-name: tick;
-        animation-duration: 2s;
-        animation-iteration-count: infinite;
+      h1 {
+        height: 40px;
+        font-size: 20px;
       }
+    }
+
+    .yellow {
+      width: 100px;
+      height: 100px;
+      background-color: var(--primary);
+      transform: rotate(-5deg);
+      animation-name: tick;
+      animation-duration: 2s;
+      animation-iteration-count: infinite;
     }
 
     .mainSection:last-of-type {
@@ -89,64 +55,22 @@
     display: grid;
     grid-template-columns: 300px 3fr;
 
-    .header,
     .hidden {
       display: none;
     }
 
-    .aside {
-      position: relative;
-      display: block;
-      height: 100%;
-      padding: 0 20px;
-      color: var(--color-text);
-      background: var(--primary);
-      transition: background 0.2s ease-in 0s;
-
-      h1 {
-        height: 60px;
-        font-size: 24px;
-        font-weight: 600;
-        line-height: 60px;
-      }
-
-      p {
-        margin-top: 20px;
-        line-height: 1.6;
-        text-align: justify;
-      }
-
-      .contact {
-        margin-top: 40px;
-
-        a + a {
-          margin-left: 20px;
-        }
-
-        svg {
-          fill: var(--color-text);
-        }
-      }
-
-      .buttonsAside {
-        position: absolute;
-        bottom: 20px;
-        left: 50%;
-        width: 100%;
-        max-width: 300px;
-        padding: 0 20px;
-        transform: translateX(-50%);
-
-        & > div:first-of-type {
-          margin-bottom: 20px;
-        }
-      }
+    .mainSection {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      column-gap: 20px;
     }
 
-    .main {
-      .info {
-        display: none;
-      }
+    .paragraph {
+      font-size: 16px !important;
+    }
+
+    .info {
+      display: none;
     }
   }
 }
