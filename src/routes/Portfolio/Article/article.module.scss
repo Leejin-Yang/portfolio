@@ -1,0 +1,62 @@
+@use '/src/styles/constants/colors';
+@use '/src/styles/mixins/responsive';
+
+.article {
+  width: 100%;
+  padding: 20px;
+  border-bottom: 1px solid var(--border1);
+
+  .title {
+    height: 40px;
+    font-size: 20px;
+  }
+
+  .desc {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  .images {
+    margin-top: 20px;
+  }
+
+  img {
+    width: 100%;
+  }
+
+  img + img {
+    margin-top: 10px;
+  }
+}
+
+.article:last-of-type {
+  border: none;
+}
+
+@include responsive.after(SD) {
+  .article {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    column-gap: 40px;
+  }
+
+  .title {
+    height: 60px !important;
+    font-weight: 500;
+  }
+
+  .desc {
+    font-size: 16px !important;
+  }
+
+  .images {
+    margin: 0 !important;
+  }
+}
+
+@include responsive.after(HD) {
+  .article {
+    border-right: 1px solid var(--border1) !important;
+    border-bottom: 1px solid var(--border1) !important;
+  }
+}
