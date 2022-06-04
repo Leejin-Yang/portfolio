@@ -63,26 +63,31 @@
 :root[color-theme='orange'] {
   --primary: #c6643a;
   --color-text: #212529;
+  --color-svg: #212520;
 }
 
 :root[color-theme='green'] {
   --primary: #004031;
   --color-text: #ececec;
+  --color-svg: #d9d9d9;
 }
 
 :root[color-theme='blue'] {
   --primary: #809ea8;
   --color-text: #212529;
+  --color-svg: #212520;
 }
 
 :root[color-theme='yellow'] {
   --primary: #e29f04;
   --color-text: #212529;
+  --color-svg: #212520;
 }
 
 :root[color-theme='pink'] {
   --primary: #e08e70;
   --color-text: #212529;
+  --color-svg: #212520;
 }
 
 body {

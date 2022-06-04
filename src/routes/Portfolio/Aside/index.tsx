@@ -12,6 +12,7 @@ const Aside = () => {
       <h1>{INFO.NAME}</h1>
       <p className={styles.intro}>{INFO.INTRO}</p>
       <ContactList />
+      <p className={styles.copyright}>{INFO.COPYRIGHT}</p>
       <div className={styles.buttonsAside}>
         <ColorButtons border={false} />
         <ThemeButtons border={false} />

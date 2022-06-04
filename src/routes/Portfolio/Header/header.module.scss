@@ -3,8 +3,6 @@
 @use '/src/styles/mixins/responsive';
 
 .header {
-  position: fixed;
-  top: 0 !important;
   z-index: levels.$HEADER;
   display: flex;
   align-items: center;
@@ -30,6 +28,7 @@
     }
 
     .themeButton {
+      font-size: 14px;
       color: var(--color-text);
     }
   }
