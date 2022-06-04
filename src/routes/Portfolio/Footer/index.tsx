@@ -20,7 +20,7 @@ const Footer = () => {
 
   return (
     <>
-      <footer>
+      <footer className={styles.footer}>
         <p>{INFO.COPYRIGHT}</p>
         <button type='button' className={styles.themePicker} aria-label='themePicker' onClick={handleModalOpen} />
       </footer>

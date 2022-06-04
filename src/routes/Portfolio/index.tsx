@@ -13,12 +13,12 @@ const Portfolio = () => {
       <Header />
       <Aside />
       <main className={styles.main}>
-        <div id='about' aria-label='hidden' />
+        <div id='about' className={styles.hidden} aria-label='hidden' />
         <article className={styles.info}>
-          <h2>{INFO.NAME}</h2>
-          <p className={styles.paragraph}>{INFO.INTRO}</p>
+          <h2 className={styles.title}>{INFO.NAME}</h2>
+          <p className={styles.desc}>{INFO.INTRO}</p>
         </article>
-        <div id='project' aria-label='hidden' />
+        <div id='project' className={styles.hidden} aria-label='hidden' />
         <Article project={QWZD} />
         <Article project={QWZD} />
         <Article project={QWZD} />
