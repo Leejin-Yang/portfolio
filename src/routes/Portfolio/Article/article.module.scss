@@ -2,18 +2,33 @@
 @use '/src/styles/mixins/responsive';
 
 .article {
+  position: relative;
   width: 100%;
   padding: 20px;
   border-bottom: 1px solid var(--border1);
 
   .title {
-    height: 40px;
     font-size: 20px;
+    font-weight: 500;
   }
 
-  .desc {
+  .subTitle {
+    margin-top: 4px;
     font-size: 14px;
     line-height: 1.6;
+  }
+
+  .desc,
+  .summary,
+  .linkList {
+    margin-top: 20px;
+    font-size: 14px;
+    line-height: 1.6;
+  }
+
+  .desc,
+  .summary {
+    font-weight: 300;
   }
 
   .images {
@@ -27,6 +42,14 @@
   img + img {
     margin-top: 10px;
   }
+
+  .hidden {
+    display: none;
+  }
+
+  .video {
+    width: 100%;
+  }
 }
 
 .article:last-of-type {
@@ -36,16 +59,17 @@
 @include responsive.after(SD) {
   .article {
     display: grid;
-    grid-template-columns: 1fr 1.5fr;
-    column-gap: 40px;
+    grid-template-columns: 1fr minmax(0, 2fr);
+    column-gap: 30px;
   }
 
-  .title {
-    height: 60px !important;
-    font-weight: 500;
+  .subTitle {
+    font-size: 16px !important;
   }
 
-  .desc {
+  .desc,
+  .summary,
+  .linkList {
     font-size: 16px !important;
   }
 

@@ -14,22 +14,28 @@
     transition: background 0.2s ease-in 0s;
 
     h1 {
-      height: 60px;
-      font-size: 24px;
+      height: 70px;
+      font-size: 28px;
       font-weight: 600;
     }
 
     .intro {
       font-size: 16px !important;
+      font-weight: 400;
       line-height: 1.6;
     }
 
-    & > ul {
+    .contact {
       margin-top: 40px;
+
+      li {
+        height: 30px;
+        line-height: 30px;
+      }
     }
 
     .copyright {
-      margin-top: 20px;
+      margin-top: 40px;
     }
 
     .buttonsAside {
@@ -43,12 +49,6 @@
       & > div:first-of-type {
         margin-bottom: 20px;
       }
-    }
-  }
-
-  .main {
-    .info {
-      display: none;
     }
   }
 }

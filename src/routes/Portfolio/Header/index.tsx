@@ -1,4 +1,4 @@
-import ContactList from 'components/ContactList';
+import ContactList from './ContactList';
 
 import styles from './header.module.scss';
 

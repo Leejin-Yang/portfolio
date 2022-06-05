@@ -13,34 +13,47 @@
   .main {
     width: 100%;
     height: calc(100% - 120px);
+    overflow-x: hidden;
     overflow-y: auto;
     scroll-behavior: smooth;
 
-    .info {
+    .about {
       width: 100%;
       padding: 20px;
       border-bottom: 1px solid var(--border1);
       transition: background 0.2s ease-in 0s;
+    }
 
-      .title {
-        height: 40px;
-        font-size: 20px;
-      }
+    .skill {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      padding: 20px;
+      border-bottom: 1px solid var(--border1);
+    }
 
-      .desc {
-        font-size: 14px;
-        line-height: 1.6;
+    .title {
+      height: 40px;
+      font-size: 20px;
+      font-weight: 500;
+    }
+
+    .desc {
+      font-size: 14px;
+      font-weight: 300;
+      line-height: 1.6;
+    }
+
+    .cv {
+      display: grid;
+      grid-template-columns: 80px 1fr;
+
+      span:last-of-type {
+        padding-left: 10px;
       }
     }
 
-    .yellow {
-      width: 100px;
-      height: 100px;
-      background-color: var(--primary);
-      transform: rotate(-5deg);
-      animation-name: tick;
-      animation-duration: 2s;
-      animation-iteration-count: infinite;
+    .cv + .cv {
+      margin-top: 10px;
     }
   }
 
@@ -57,9 +70,22 @@
 
     .main {
       height: 100%;
+
+      .skill {
+        column-gap: 40px;
+      }
+
+      .cv {
+        display: grid;
+        grid-template-columns: 80px 1fr;
+
+        span:last-of-type {
+          padding-left: 16px;
+        }
+      }
     }
 
-    .info {
+    .about {
       display: none;
     }
 
@@ -74,6 +100,10 @@
     .main {
       display: grid;
       grid-template-columns: 1fr 1fr;
+
+      .skill {
+        border-right: 1px solid var(--border1) !important;
+      }
     }
   }
 }
@@ -87,15 +117,5 @@
   to {
     width: 100%;
     margin-left: 0%;
-  }
-}
-
-@keyframes tick {
-  0% {
-    transform: rotate(-5deg);
-  }
-
-  50% {
-    transform: rotate(5deg);
   }
 }

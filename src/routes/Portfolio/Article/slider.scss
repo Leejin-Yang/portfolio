@@ -1,0 +1,44 @@
+/* stylelint-disable selector-class-pattern */
+
+.slick-slider {
+  width: 100%;
+}
+
+.slick-list {
+  width: 100%;
+  margin: 0 auto;
+  overflow-x: hidden;
+}
+
+.slick-slide div {
+  cursor: pointer;
+}
+
+.slick-dots {
+  position: relative;
+  padding-bottom: 20px;
+
+  li {
+    button::before {
+      color: var(--text1) !important;
+    }
+  }
+}
+
+.slick-prev,
+.slick-next {
+  display: none !important;
+}
+
+.slick-prev {
+  left: 2%;
+  display: none !important;
+}
+
+.slick-next {
+  right: 2% !important;
+}
+
+.slick-track {
+  width: 100%;
+}

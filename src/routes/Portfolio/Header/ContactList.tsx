@@ -1,6 +1,6 @@
 import { GithubIcon, InstagramIcon, MailIcon } from 'assets/svgs';
 
-import styles from './contactList.module.scss';
+import styles from './header.module.scss';
 
 const ContactList = () => {
   return (

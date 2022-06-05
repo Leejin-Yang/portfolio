@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-import { INFO } from 'assets/article';
+import { info } from 'assets/article';
 
 import ModalPortal from 'routes/Modal/modalPortal';
 import ThemePicker from 'routes/Modal/ThemePicker';
@@ -21,7 +21,7 @@ const Footer = () => {
   return (
     <>
       <footer className={styles.footer}>
-        <p>{INFO.COPYRIGHT}</p>
+        <p>{info.copyright}</p>
         <button type='button' className={styles.themePicker} aria-label='themePicker' onClick={handleModalOpen} />
       </footer>
       {isModalOpen && (

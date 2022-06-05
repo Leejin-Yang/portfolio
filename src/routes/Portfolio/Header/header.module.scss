@@ -33,6 +33,19 @@
     }
   }
 
+  .contact {
+    display: flex;
+    align-items: center;
+
+    li + li {
+      margin-left: 12px;
+    }
+
+    svg {
+      fill: var(--color-svg);
+    }
+  }
+
   @include responsive.after(SD) {
     display: none;
   }
