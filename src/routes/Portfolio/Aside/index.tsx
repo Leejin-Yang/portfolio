@@ -1,11 +1,14 @@
 import { info } from 'assets/article';
+import useTheme from 'hooks/useTheme';
+import { BACKGROUND_THEME, COLOR_THEME } from 'constants/theme';
 
 import ColorButtons from 'components/ColorButtons';
-import ThemeButtons from 'components/ThemeButtons';
 
 import styles from './aside.module.scss';
 
 const Aside = () => {
+  const { handleBackgroundTheme, handleColorTheme } = useTheme();
+
   return (
     <aside className={styles.aside}>
       <h1>{info.name}</h1>
@@ -27,8 +30,8 @@ const Aside = () => {
       </ul>
       <p className={styles.copyright}>{info.copyright}</p>
       <div className={styles.buttonsAside}>
-        <ColorButtons border={false} />
-        <ThemeButtons border={false} />
+        <ColorButtons colors={COLOR_THEME} onClick={handleColorTheme} border={false} />
+        <ColorButtons colors={BACKGROUND_THEME} onClick={handleBackgroundTheme} border={false} />
       </div>
     </aside>
   );

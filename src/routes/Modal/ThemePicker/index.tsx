@@ -1,5 +1,7 @@
+import useTheme from 'hooks/useTheme';
+import { BACKGROUND_THEME, COLOR_THEME } from 'constants/theme';
+
 import ColorButtons from 'components/ColorButtons';
-import ThemeButtons from 'components/ThemeButtons';
 
 import styles from './themePicker.module.scss';
 
@@ -8,6 +10,8 @@ interface Props {
 }
 
 const ThemePicker = ({ onClose }: Props) => {
+  const { handleBackgroundTheme, handleColorTheme } = useTheme();
+
   return (
     <>
       <button type='button' className={styles.background} onClick={onClose} aria-label='background' />
@@ -15,9 +19,9 @@ const ThemePicker = ({ onClose }: Props) => {
         <div className={styles.modal}>
           <button type='button' className={styles.navigate} onClick={onClose} aria-label='exit' />
           <h2>색상</h2>
-          <ColorButtons border={false} />
+          <ColorButtons colors={COLOR_THEME} onClick={handleColorTheme} border={false} />
           <h2>배경</h2>
-          <ThemeButtons border />
+          <ColorButtons colors={BACKGROUND_THEME} onClick={handleBackgroundTheme} border />
         </div>
       </div>
     </>

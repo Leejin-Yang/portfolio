@@ -1,36 +1,24 @@
 import { MouseEvent } from 'react';
-import { useRecoilState } from 'recoil';
-import store from 'store';
 
-import { colorThemeMode } from 'states/theme';
-
-import ColorButton from '../ColorButton';
+import ColorButton from './ColorButton';
 
 import styles from './colorButtons.module.scss';
 
 interface Props {
+  colors: string[];
   border: boolean;
+  onClick: (e: MouseEvent<HTMLButtonElement>) => void;
 }
 
-const ColorButtons = ({ border }: Props) => {
-  const [, setColorTheme] = useRecoilState(colorThemeMode);
-
-  const onClick = (e: MouseEvent<HTMLButtonElement>) => {
-    const newTheme = e.currentTarget.dataset.theme || 'orange';
-
-    setColorTheme(newTheme);
-    document.documentElement.setAttribute('color-theme', newTheme);
-    store.set('leejin.color.theme', newTheme);
-  };
-
+const ColorButtons = ({ colors, border, onClick }: Props) => {
   return (
-    <div className={styles.colorButtons}>
-      <ColorButton color='orange' onClick={onClick} border={border} />
-      <ColorButton color='green' onClick={onClick} border={border} />
-      <ColorButton color='blue' onClick={onClick} border={border} />
-      <ColorButton color='yellow' onClick={onClick} border={border} />
-      <ColorButton color='pink' onClick={onClick} border={border} />
-    </div>
+    <ul className={styles.colorButtons}>
+      {colors.map((color) => (
+        <li key={`theme-${color}`}>
+          <ColorButton color={color} onClick={onClick} border={border} />
+        </li>
+      ))}
+    </ul>
   );
 };
 

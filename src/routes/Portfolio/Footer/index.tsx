@@ -22,7 +22,7 @@ const Footer = () => {
     <>
       <footer className={styles.footer}>
         <p>{info.copyright}</p>
-        <button type='button' className={styles.themePicker} aria-label='themePicker' onClick={handleModalOpen} />
+        <button type='button' className={styles.themePicker} onClick={handleModalOpen} aria-label='themePicker' />
       </footer>
       {isModalOpen && (
         <ModalPortal>

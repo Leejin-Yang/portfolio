@@ -1,11 +1,14 @@
 import { useNavigate } from 'react-router-dom';
 
+import useTheme from 'hooks/useTheme';
+import { BACKGROUND_THEME, COLOR_THEME } from 'constants/theme';
+
 import ColorButtons from 'components/ColorButtons';
-import ThemeButtons from 'components/ThemeButtons';
 
 import styles from './themeSettingPage.module.scss';
 
 const ThemeSettingPage = () => {
+  const { handleBackgroundTheme, handleColorTheme } = useTheme();
   const navigate = useNavigate();
 
   const onClick = () => {
@@ -26,9 +29,9 @@ const ThemeSettingPage = () => {
           </p>
         </div>
         <h2>색상</h2>
-        <ColorButtons border={false} />
+        <ColorButtons colors={COLOR_THEME} onClick={handleColorTheme} border={false} />
         <h2>배경</h2>
-        <ThemeButtons border />
+        <ColorButtons colors={BACKGROUND_THEME} onClick={handleBackgroundTheme} border />
       </section>
     </main>
   );
