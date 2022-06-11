@@ -1,0 +1,52 @@
+@use '/src/styles/constants/colors';
+@use '/src/styles/constants/levels';
+@use '/src/styles/mixins/responsive';
+
+.header {
+  z-index: levels.$HEADER;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 60px;
+  padding: 0 20px;
+  color: var(--color-text);
+  background: var(--primary);
+  transition: background 0.2s ease-in 0s;
+
+  .nav {
+    display: flex;
+    align-items: center;
+
+    li {
+      padding: 0 4px;
+      font-size: 14px;
+    }
+
+    li:last-of-type {
+      padding: 0 0 0 4px;
+    }
+
+    .themeButton {
+      font-size: 14px;
+      color: var(--color-text);
+    }
+  }
+
+  .contact {
+    display: flex;
+    align-items: center;
+
+    li + li {
+      margin-left: 12px;
+    }
+
+    svg {
+      fill: var(--color-svg);
+    }
+  }
+
+  @include responsive.after(SD) {
+    display: none;
+  }
+}

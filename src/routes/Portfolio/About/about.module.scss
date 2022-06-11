@@ -1,0 +1,61 @@
+@use '/src/styles/constants/colors';
+@use '/src/styles/mixins/responsive';
+
+.about {
+  width: 100%;
+  padding: 20px;
+  border-bottom: 1px solid var(--border1);
+  transition: background 0.2s ease-in 0s;
+}
+
+.stacks {
+  padding: 20px;
+  border-bottom: 1px solid var(--border1);
+
+  .skills {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    row-gap: 40px;
+  }
+}
+
+.title {
+  height: 40px;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.subTitle {
+  margin-bottom: 8px;
+  line-height: 1.6;
+}
+
+.desc {
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 1.6;
+}
+
+@include responsive.after(SD) {
+  .skills {
+    column-gap: 40px;
+  }
+
+  .subTitle {
+    font-size: 18px !important;
+  }
+
+  .desc {
+    font-size: 16px !important;
+  }
+
+  .about {
+    display: none;
+  }
+}
+
+@include responsive.after(HD) {
+  .stacks {
+    border-right: 1px solid var(--border1) !important;
+  }
+}

@@ -1,0 +1,26 @@
+@use '/src/styles/mixins/responsive';
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 60px;
+  padding: 0 20px;
+  font-size: 14px;
+  line-height: 60px;
+  color: var(--color-text);
+  background-color: var(--primary);
+
+  .themePicker {
+    position: relative;
+    width: 30px;
+    height: 30px;
+    background: linear-gradient(-45deg, var(--primary) 50%, var(--color-background) 50%);
+    border: 1px solid var(--border3);
+    border-radius: 50%;
+  }
+
+  @include responsive.after(SD) {
+    display: none;
+  }
+}
