@@ -1,8 +1,10 @@
-import snowWhite from 'assets/images/snow-white.jpeg';
+import mainImage from 'assets/images/moadata/main.jpg';
+import manageImage from 'assets/images/moadata/manage.jpg';
+import detailImage from 'assets/images/moadata/detail.jpg';
 
-import main from 'assets/videos/moadata/main.mp4';
-import manage from 'assets/videos/moadata/manage.mp4';
-import detail from 'assets/videos/moadata/detail.mp4';
+import mainVideo from 'assets/videos/moadata/main.mp4';
+import manageVideo from 'assets/videos/moadata/manage.mp4';
+import detailVideo from 'assets/videos/moadata/detail.mp4';
 
 import { IProject } from 'types/project.d';
 
@@ -18,19 +20,19 @@ const moadata: IProject = {
   ],
   imgs: [
     {
-      src: snowWhite,
-      alt: 'snow-white',
-      videoSrc: main,
+      src: mainImage,
+      alt: 'back-office-main',
+      videoSrc: mainVideo,
     },
     {
-      src: snowWhite,
-      alt: 'snow-white',
-      videoSrc: manage,
+      src: manageImage,
+      alt: 'back-office-manage',
+      videoSrc: manageVideo,
     },
     {
-      src: snowWhite,
-      alt: 'snow-white',
-      videoSrc: detail,
+      src: detailImage,
+      alt: 'back-office-detail',
+      videoSrc: detailVideo,
     },
   ],
 };

@@ -1,8 +1,10 @@
-import snowWhite from 'assets/images/snow-white.jpeg';
+import mainImage from 'assets/images/madup/main.jpg';
+import datepickerImage from 'assets/images/madup/datepicker.jpg';
+import tooltipImage from 'assets/images/madup/tooltip.jpg';
 
-import main from 'assets/videos/madup/main.mp4';
-import datepicker from 'assets/videos/madup/datepicker.mp4';
-import tooltip from 'assets/videos/madup/tooltip.mp4';
+import mainVideo from 'assets/videos/madup/main.mp4';
+import datepickerVideo from 'assets/videos/madup/datepicker.mp4';
+import tooltipVideo from 'assets/videos/madup/tooltip.mp4';
 
 import { IProject } from 'types/project.d';
 
@@ -18,19 +20,19 @@ const madup: IProject = {
   ],
   imgs: [
     {
-      src: snowWhite,
-      alt: 'snow-white',
-      videoSrc: main,
+      src: mainImage,
+      alt: 'dashboard-main',
+      videoSrc: mainVideo,
     },
     {
-      src: snowWhite,
-      alt: 'snow-white',
-      videoSrc: datepicker,
+      src: datepickerImage,
+      alt: 'dashboard-datepicker',
+      videoSrc: datepickerVideo,
     },
     {
-      src: snowWhite,
-      alt: 'snow-white',
-      videoSrc: tooltip,
+      src: tooltipImage,
+      alt: 'dashboard-tooltip',
+      videoSrc: tooltipVideo,
     },
   ],
 };

@@ -1,6 +1,6 @@
-import snowWhite from 'assets/images/snow-white.jpeg';
+import mainImage from 'assets/images/humanscape/main.jpg';
 
-import video from 'assets/videos/humanscape/video.mp4';
+import mainVideo from 'assets/videos/humanscape/main.mp4';
 
 import { IProject } from 'types/project.d';
 
@@ -16,9 +16,9 @@ const humanscape: IProject = {
   ],
   imgs: [
     {
-      src: snowWhite,
-      alt: 'snow-white',
-      videoSrc: video,
+      src: mainImage,
+      alt: 'recommand-main',
+      videoSrc: mainVideo,
     },
   ],
 };

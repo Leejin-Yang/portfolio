@@ -2,6 +2,7 @@ import main from 'assets/images/qwzd/main.png';
 import stat from 'assets/images/qwzd/stat.png';
 import modal from 'assets/images/qwzd/modal.png';
 import ranking from 'assets/images/qwzd/ranking.png';
+
 import { IProject } from 'types/project.d';
 
 const qwzd: IProject = {

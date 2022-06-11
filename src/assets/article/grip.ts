@@ -1,7 +1,8 @@
-import snowWhite from 'assets/images/snow-white.jpeg';
+import searchImage from 'assets/images/grip/search.jpg';
+import favoriteImage from 'assets/images/grip/favorites.jpg';
 
-import gripVideo1 from 'assets/videos/grip/video-1.mp4';
-import gripVideo2 from 'assets/videos/grip/video-2.mp4';
+import searchVideo from 'assets/videos/grip/search.mp4';
+import favoritesVideo from 'assets/videos/grip/favorites.mp4';
 
 import { IProject } from 'types/project.d';
 
@@ -17,14 +18,14 @@ const grip: IProject = {
   ],
   imgs: [
     {
-      src: snowWhite,
-      alt: 'snow-white',
-      videoSrc: gripVideo1,
+      src: searchImage,
+      alt: 'movie-app-search',
+      videoSrc: searchVideo,
     },
     {
-      src: snowWhite,
-      alt: 'snow-white',
-      videoSrc: gripVideo2,
+      src: favoriteImage,
+      alt: 'movie-app-favorite',
+      videoSrc: favoritesVideo,
     },
   ],
 };
