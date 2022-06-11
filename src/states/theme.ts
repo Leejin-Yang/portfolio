@@ -13,15 +13,12 @@ const getBackgroundTheme = () => {
   return backgroundTheme;
 };
 
-const initialState = getBackgroundTheme();
-const init = store.get('leejin.color.theme') || 'orange';
-
 export const backgroundThemeMode = atom<string>({
   key: '#backgroundThemeMode',
-  default: initialState,
+  default: getBackgroundTheme(),
 });
 
 export const colorThemeMode = atom<string>({
   key: '#colorThemeMode',
-  default: init,
+  default: store.get('leejin.color.theme') || 'orange',
 });
