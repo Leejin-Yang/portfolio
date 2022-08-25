@@ -15,16 +15,17 @@ const About = () => {
           <section>
             <h3 className={styles.subTitle}>Frontend</h3>
             <ul className={styles.desc}>
-              {info.frontend.map((skill) => (
-                <li key={`skills-${skill}`}>{skill}</li>
-              ))}
+              {info.frontend.map((skill, index) => {
+                const key = `frontend-skills-${skill}-${index}`;
+                return <li key={key}>{skill}</li>;
+              })}
             </ul>
           </section>
           <section>
             <h3 className={styles.subTitle}>Collaboration</h3>
             <ul className={styles.desc}>
               {info.collaboration.map((skill) => (
-                <li key={`skills-${skill}`}>{skill}</li>
+                <li key={`collaboration-skills-${skill}`}>{skill}</li>
               ))}
             </ul>
           </section>

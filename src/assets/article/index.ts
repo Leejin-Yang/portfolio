@@ -1,9 +1,7 @@
 import info from './info';
 import qwzd from './qwzd';
-import grip from './grip';
-import humanscape from './humanscape';
-import madup from './madup';
-import kb from './kb';
-import moadata from './moadata';
+import movieApp from './movieApp';
+import recommend from './recommend';
+import dashboard from './dashboard';
 
-export { info, qwzd, grip, humanscape, madup, kb, moadata };
+export { info, qwzd, movieApp, recommend, dashboard };

@@ -1,4 +1,4 @@
-import { grip, humanscape, kb, madup, moadata, qwzd } from 'assets/article';
+import { qwzd, movieApp, recommend, dashboard } from 'assets/article';
 
 import Header from './Header';
 import Aside from './Aside';
@@ -18,11 +18,9 @@ const Portfolio = () => {
         <About />
         <div id='project' className={styles.hidden} aria-hidden />
         <Article project={qwzd} />
-        <Article project={grip} />
-        <Article project={humanscape} />
-        <Article project={madup} />
-        <Article project={kb} />
-        <Article project={moadata} />
+        <Article project={movieApp} />
+        <Article project={recommend} />
+        <Article project={dashboard} />
       </main>
       <Footer />
     </div>
