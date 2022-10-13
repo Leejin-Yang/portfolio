@@ -1,12 +1,12 @@
 import cx from 'classnames';
-import type { MouseEvent } from 'react';
+import type { MouseEventHandler } from 'react';
 
 import styles from './colorButton.module.scss';
 
 interface Props {
   color: string;
   border: boolean;
-  onClick: (e: MouseEvent<HTMLButtonElement>) => void;
+  onClick: MouseEventHandler;
 }
 
 const ColorButton = ({ color, border, onClick }: Props) => {

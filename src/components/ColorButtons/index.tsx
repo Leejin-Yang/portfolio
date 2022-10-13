@@ -1,5 +1,5 @@
 import type { BackgroundTheme, ColorTheme } from 'constants/theme';
-import type { MouseEvent } from 'react';
+import type { MouseEventHandler } from 'react';
 
 import ColorButton from './ColorButton';
 import styles from './colorButtons.module.scss';
@@ -7,7 +7,7 @@ import styles from './colorButtons.module.scss';
 interface Props {
   colors: ColorTheme | BackgroundTheme;
   border: boolean;
-  onClick: (e: MouseEvent<HTMLButtonElement>) => void;
+  onClick: MouseEventHandler;
 }
 
 const ColorButtons = ({ colors, border, onClick }: Props) => {
