@@ -1,5 +1,5 @@
-import { MouseEvent } from 'react';
 import cx from 'classnames';
+import type { MouseEvent } from 'react';
 
 import styles from './colorButton.module.scss';
 

@@ -1,7 +1,7 @@
-import info from './info';
-import qwzd from './qwzd';
-import movieApp from './movieApp';
-import recommend from './recommend';
 import dashboard from './dashboard';
+import info from './info';
+import movieApp from './movieApp';
+import qwzd from './qwzd';
+import recommend from './recommend';
 
-export { info, qwzd, movieApp, recommend, dashboard };
+export { dashboard, info, movieApp, qwzd, recommend };

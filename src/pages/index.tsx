@@ -1,11 +1,10 @@
 import { Route, Routes } from 'react-router-dom';
 import { useMount } from 'react-use';
 import { useRecoilState } from 'recoil';
-
 import { backgroundThemeMode, colorThemeMode } from 'states/theme';
 
-import ThemeSettingPage from './ThemeSettingPage';
 import Portfolio from './Portfolio';
+import ThemeSettingPage from './ThemeSettingPage';
 
 const App = () => {
   const [backgroundTheme] = useRecoilState(backgroundThemeMode);

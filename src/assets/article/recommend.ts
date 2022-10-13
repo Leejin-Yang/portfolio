@@ -1,8 +1,6 @@
 import mainImage from 'assets/images/recommend/main.jpg';
-
 import mainVideo from 'assets/videos/recommend/main.mp4';
-
-import { IProject } from 'types/project.d';
+import type { IProject } from 'types/project.d';
 
 const recommend: IProject = {
   title: 'Recommand',

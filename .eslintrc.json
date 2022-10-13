@@ -1,5 +1,6 @@
 {
-  "extends": ["airbnb", "airbnb/hooks", "react-app", "prettier", "plugin:react/recommended", "plugin:prettier/recommended"],
+  "extends": ["airbnb", "airbnb/hooks", "react-app", "prettier"],
+  "plugins": ["react", "prettier", "simple-import-sort"],
   "env": {
     "browser": true,
     "jasmine": true,
@@ -21,12 +22,13 @@
     "arrow-body-style": "off",
     "react/function-component-definition": ["warn", { "namedComponents": "arrow-function" }],
     "react/jsx-one-expression-per-line": "off",
-    "react/jsx-filename-extension": [
+    "react/jsx-filename-extension": ["error", { "extensions": [".js", ".jsx", ".ts", ".tsx"] }],
+    "prettier/prettier": [
       "error",
-      { "extensions": [".js", ".jsx", ".ts", ".tsx"] }
-    ],
-    "prettier/prettier": ["error",{
-      "endOfLine": "auto"}
+      {
+        "endOfLine": "auto"
+      },
+      { "usePrettierrc": true }
     ],
     "react/jsx-indent": "warn",
     "react/jsx-props-no-spreading": "off",
@@ -58,10 +60,7 @@
     "@typescript-eslint/no-non-null-assertion": "off",
     "@typescript-eslint/no-unsafe-member-access": "off",
     "@typescript-eslint/no-unsafe-assignment": "off",
-    "@typescript-eslint/no-unused-vars": [
-      "warn",
-      { "argsIgnorePattern": "^_" }
-    ],
+    "@typescript-eslint/no-unused-vars": ["warn", { "argsIgnorePattern": "^_" }],
     "prefer-const": ["warn"],
     "prefer-destructuring": ["error", { "object": true, "array": false }],
     "lines-between-class-members": "off",
@@ -83,6 +82,15 @@
         "ts": "never",
         "tsx": "never"
       }
-    ]
+    ],
+    "@typescript-eslint/consistent-type-imports": [
+      "error",
+      {
+        "prefer": "type-imports",
+        "disallowTypeAnnotations": false
+      }
+    ],
+    "simple-import-sort/imports": "error",
+    "simple-import-sort/exports": "error"
   }
 }

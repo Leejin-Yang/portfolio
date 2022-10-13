@@ -1,13 +1,13 @@
-import React from 'react';
-import cx from 'classnames';
-import Slider from 'react-slick';
-
-import { IProject } from 'types/project.d';
-
 import 'slick-carousel/slick/slick.scss';
 import 'slick-carousel/slick/slick-theme.scss';
-import styles from './article.module.scss';
 import './slider.scss';
+
+import cx from 'classnames';
+import React from 'react';
+import Slider from 'react-slick';
+import type { IProject } from 'types/project.d';
+
+import styles from './article.module.scss';
 
 interface Props {
   project: IProject;

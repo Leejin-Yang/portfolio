@@ -1,7 +1,6 @@
-import { MouseEvent } from 'react';
+import type { MouseEvent } from 'react';
 
 import ColorButton from './ColorButton';
-
 import styles from './colorButtons.module.scss';
 
 interface Props {
