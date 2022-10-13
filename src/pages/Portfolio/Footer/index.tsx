@@ -1,9 +1,7 @@
-import { useState } from 'react';
-
 import { info } from 'assets/article';
-
-import ModalPortal from 'routes/Modal/modalPortal';
-import ThemePicker from 'routes/Modal/ThemePicker';
+import ModalPortal from 'pages/Modal/modalPortal';
+import ThemePicker from 'pages/Modal/ThemePicker';
+import { useState } from 'react';
 
 import styles from './footer.module.scss';
 
@@ -22,7 +20,12 @@ const Footer = () => {
     <>
       <footer className={styles.footer}>
         <p>{info.copyright}</p>
-        <button type='button' className={styles.themePicker} onClick={handleModalOpen} aria-label='themePicker' />
+        <button
+          type='button'
+          className={styles.themePicker}
+          onClick={handleModalOpen}
+          aria-label='themePicker'
+        />
       </footer>
       {isModalOpen && (
         <ModalPortal>

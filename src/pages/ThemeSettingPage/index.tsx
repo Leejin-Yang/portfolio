@@ -1,9 +1,7 @@
-import { useNavigate } from 'react-router-dom';
-
-import useTheme from 'hooks/useTheme';
-import { BACKGROUND_THEME, COLOR_THEME } from 'constants/theme';
-
 import ColorButtons from 'components/ColorButtons';
+import { BACKGROUND_THEME, COLOR_THEME } from 'constants/theme';
+import useTheme from 'hooks/useTheme';
+import { useNavigate } from 'react-router-dom';
 
 import styles from './themeSettingPage.module.scss';
 

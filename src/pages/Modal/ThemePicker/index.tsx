@@ -1,7 +1,6 @@
-import useTheme from 'hooks/useTheme';
-import { BACKGROUND_THEME, COLOR_THEME } from 'constants/theme';
-
 import ColorButtons from 'components/ColorButtons';
+import { BACKGROUND_THEME, COLOR_THEME } from 'constants/theme';
+import useTheme from 'hooks/useTheme';
 
 import styles from './themePicker.module.scss';
 
@@ -14,7 +13,12 @@ const ThemePicker = ({ onClose }: Props) => {
 
   return (
     <>
-      <button type='button' className={styles.background} onClick={onClose} aria-label='background' />
+      <button
+        type='button'
+        className={styles.background}
+        onClick={onClose}
+        aria-label='background'
+      />
       <div className={styles.modalContainer}>
         <div className={styles.modal}>
           <button type='button' className={styles.navigate} onClick={onClose} aria-label='exit' />

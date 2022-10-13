@@ -10,6 +10,7 @@ const info = {
     'TypeScript',
     '@',
     'React',
+    'Redux Toolkit',
     'Recoil',
     '@',
     'SCSS',

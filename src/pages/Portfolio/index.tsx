@@ -1,12 +1,11 @@
-import { qwzd, movieApp, recommend, dashboard } from 'assets/article';
+import { dashboard, movieApp, qwzd, recommend } from 'assets/article';
 
-import Header from './Header';
-import Aside from './Aside';
-import Article from './Article';
-import Footer from './Footer';
-
-import styles from './portfolio.module.scss';
 import About from './About';
+import Article from './Article';
+import Aside from './Aside';
+import Footer from './Footer';
+import Header from './Header';
+import styles from './portfolio.module.scss';
 
 const Portfolio = () => {
   return (

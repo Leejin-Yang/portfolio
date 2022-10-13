@@ -1,8 +1,7 @@
-import { MouseEvent } from 'react';
+import type { MouseEvent } from 'react';
 import { useRecoilState } from 'recoil';
-import store from 'store';
-
 import { backgroundThemeMode, colorThemeMode } from 'states/theme';
+import store from 'store';
 
 const useTheme = () => {
   const [, setBackgroundTheme] = useRecoilState(backgroundThemeMode);
