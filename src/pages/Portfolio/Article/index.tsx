@@ -3,25 +3,28 @@ import 'slick-carousel/slick/slick-theme.scss';
 import './slider.scss';
 
 import cx from 'classnames';
-import React from 'react';
+import parse from 'html-react-parser';
+import React, { useMemo } from 'react';
 import Slider from 'react-slick';
-import type { IProject } from 'types/project.d';
+import type { Project } from 'types/project.d';
 
 import styles from './article.module.scss';
 
 interface Props {
-  project: IProject;
+  project: Project;
 }
 
 const Article = ({ project }: Props) => {
   const { title, subTitle, desc, duration, stack, links, imgs } = project;
+
+  const descHtml = useMemo(() => parse(desc), [desc]);
 
   return (
     <article className={styles.article}>
       <section className={styles.section}>
         <h2 className={styles.title}>{title}</h2>
         <h3 className={styles.subTitle}>{subTitle}</h3>
-        <p className={styles.desc}>{desc}</p>
+        <p className={styles.desc}>{descHtml}</p>
         <ul className={styles.summary}>
           <li>{duration}</li>
           <li>{stack}</li>
