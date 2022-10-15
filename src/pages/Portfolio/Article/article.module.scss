@@ -18,6 +18,14 @@
     line-height: 1.6;
   }
 
+  .desc {
+    white-space: pre-wrap;
+
+    strong {
+      font-weight: 500;
+    }
+  }
+
   .desc,
   .summary,
   .linkList {

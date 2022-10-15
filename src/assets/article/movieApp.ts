@@ -7,7 +7,7 @@ import type { IProject } from 'types/project.d';
 const movieApp: IProject = {
   title: 'Movie App',
   subTitle: '영화 검색, 즐겨찾기 사이트',
-  desc: 'Open API를 이용한 영화 검색과 즐겨찾기를 등록할 수 있는 서비스입니다. 모바일 환경을 먼저 고려해 디자인 했습니다. 영화 데이터 요청은 Infinite Scroll을 이용해 구현했습니다. 즐겨찾기를 등록한 영화를 로컬 스토리지에 저장해 유지하게 했습니다. 즐겨찾기에 등록된 영화 목록 순서를 Drag & Drop으로 변경할 수 있습니다.',
+  desc: 'Open API를 이용한 영화 검색과 즐겨찾기를 등록할 수 있는 서비스입니다. 모바일 환경을 먼저 고려해 디자인 했습니다. 영화 데이터 요청은 <strong>Infinite Scroll</strong>을 이용해 구현했습니다. 즐겨찾기를 등록한 영화를 로컬 스토리지에 저장해 유지하게 했습니다. 즐겨찾기에 등록된 영화 목록 순서를 <strong>Drag & Drop</strong>으로 변경할 수 있습니다.',
   duration: '2022.5.10 ~ 2022.5.15',
   stack: 'React, TypeScript, SCSS, Recoil',
   links: [
