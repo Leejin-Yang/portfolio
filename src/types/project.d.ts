@@ -1,20 +1,20 @@
-interface IImage {
+interface Image {
   src: string;
   alt: string;
   videoSrc?: string;
 }
 
-interface ILink {
+interface Link {
   src: string;
   key: string;
 }
 
-export interface IProject {
+export interface Project {
   title: string;
   subTitle: string;
   desc: string;
   duration: string;
   stack: string;
-  links: ILink[];
-  imgs: IImage[];
+  links: Link[];
+  imgs: Image[];
 }
