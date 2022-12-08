@@ -1,8 +1,8 @@
-import favoriteImage from 'assets/images/movieApp/favorites.jpg';
-import searchImage from 'assets/images/movieApp/search.jpg';
-import favoritesVideo from 'assets/videos/movieApp/favorites.mp4';
-import searchVideo from 'assets/videos/movieApp/search.mp4';
-import type { Project } from 'types/project.d';
+import favoriteImage from '@/assets/images/movieApp/favorites.jpg';
+import searchImage from '@/assets/images/movieApp/search.jpg';
+import favoritesVideo from '@/assets/videos/movieApp/favorites.mp4';
+import searchVideo from '@/assets/videos/movieApp/search.mp4';
+import type { Project } from '@/types/project.d';
 
 const movieApp: Project = {
   title: 'Movie App',

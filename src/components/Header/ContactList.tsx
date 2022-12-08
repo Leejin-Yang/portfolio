@@ -1,4 +1,4 @@
-import { GithubIcon, InstagramIcon, MailIcon } from 'assets/svgs';
+import { GithubIcon, InstagramIcon, MailIcon } from '@/assets/svgs';
 
 import styles from './header.module.scss';
 

@@ -1,7 +1,7 @@
-import { info } from 'assets/article';
-import ColorButtons from 'components/ColorButtons';
-import { BACKGROUND_THEME, COLOR_THEME } from 'constants/theme';
-import useTheme from 'hooks/useTheme';
+import { info } from '@/assets/article';
+import ColorButtons from '@/components/ColorButtons';
+import { BACKGROUND_THEME, COLOR_THEME } from '@/constants/theme';
+import useTheme from '@/hooks/useTheme';
 
 import styles from './aside.module.scss';
 

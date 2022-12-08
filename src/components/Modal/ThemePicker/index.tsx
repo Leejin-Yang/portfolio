@@ -1,6 +1,6 @@
-import ColorButtons from 'components/ColorButtons';
-import { BACKGROUND_THEME, COLOR_THEME } from 'constants/theme';
-import useTheme from 'hooks/useTheme';
+import ColorButtons from '@/components/ColorButtons';
+import { BACKGROUND_THEME, COLOR_THEME } from '@/constants/theme';
+import useTheme from '@/hooks/useTheme';
 
 import styles from './themePicker.module.scss';
 

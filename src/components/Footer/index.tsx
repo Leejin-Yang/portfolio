@@ -1,7 +1,8 @@
-import { info } from 'assets/article';
-import ModalPortal from 'pages/Modal/modalPortal';
-import ThemePicker from 'pages/Modal/ThemePicker';
 import { useState } from 'react';
+
+import { info } from '@/assets/article';
+import ModalPortal from '@/components/Modal/modalPortal';
+import ThemePicker from '@/components/Modal/ThemePicker';
 
 import styles from './footer.module.scss';
 

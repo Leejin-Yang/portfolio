@@ -1,5 +1,6 @@
-import type { BackgroundTheme, ColorTheme } from 'constants/theme';
 import type { MouseEventHandler } from 'react';
+
+import type { BackgroundTheme, ColorTheme } from '@/constants/theme';
 
 import ColorButton from './ColorButton';
 import styles from './colorButtons.module.scss';

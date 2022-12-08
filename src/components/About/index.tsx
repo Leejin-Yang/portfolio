@@ -1,4 +1,4 @@
-import { info } from 'assets/article';
+import { info } from '@/assets/article';
 
 import styles from './about.module.scss';
 

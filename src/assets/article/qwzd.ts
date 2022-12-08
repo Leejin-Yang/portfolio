@@ -1,8 +1,8 @@
-import main from 'assets/images/qwzd/main.png';
-import modal from 'assets/images/qwzd/modal.png';
-import ranking from 'assets/images/qwzd/ranking.png';
-import stat from 'assets/images/qwzd/stat.png';
-import type { Project } from 'types/project.d';
+import main from '@/assets/images/qwzd/main.png';
+import modal from '@/assets/images/qwzd/modal.png';
+import ranking from '@/assets/images/qwzd/ranking.png';
+import stat from '@/assets/images/qwzd/stat.png';
+import type { Project } from '@/types/project.d';
 
 const qwzd: Project = {
   title: 'QWZD',

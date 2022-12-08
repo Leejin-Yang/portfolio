@@ -1,10 +1,10 @@
-import datepickerImage from 'assets/images/dashboard/datepicker.jpg';
-import mainImage from 'assets/images/dashboard/main.jpg';
-import tooltipImage from 'assets/images/dashboard/tooltip.jpg';
-import datepickerVideo from 'assets/videos/dashboard/datepicker.mp4';
-import mainVideo from 'assets/videos/dashboard/main.mp4';
-import tooltipVideo from 'assets/videos/dashboard/tooltip.mp4';
-import type { Project } from 'types/project.d';
+import datepickerImage from '@/assets/images/dashboard/datepicker.jpg';
+import mainImage from '@/assets/images/dashboard/main.jpg';
+import tooltipImage from '@/assets/images/dashboard/tooltip.jpg';
+import datepickerVideo from '@/assets/videos/dashboard/datepicker.mp4';
+import mainVideo from '@/assets/videos/dashboard/main.mp4';
+import tooltipVideo from '@/assets/videos/dashboard/tooltip.mp4';
+import type { Project } from '@/types/project.d';
 
 const dashboard: Project = {
   title: 'Dashboard',

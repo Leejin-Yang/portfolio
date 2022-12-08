@@ -6,7 +6,8 @@ import cx from 'classnames';
 import parse from 'html-react-parser';
 import React, { useMemo } from 'react';
 import Slider from 'react-slick';
-import type { Project } from 'types/project.d';
+
+import type { Project } from '@/types/project.d';
 
 import styles from './article.module.scss';
 
@@ -39,7 +40,7 @@ const Article = ({ project }: Props) => {
           ))}
         </ul>
       </section>
-      <div className={styles.images}>
+      {/*<div className={styles.images}>
         <Slider dots infinite>
           {imgs.map((img) => (
             <React.Fragment key={img.alt}>
@@ -52,7 +53,7 @@ const Article = ({ project }: Props) => {
             </React.Fragment>
           ))}
         </Slider>
-      </div>
+      </div>*/}
     </article>
   );
 };
