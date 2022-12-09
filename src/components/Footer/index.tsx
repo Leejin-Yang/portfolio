@@ -1,6 +1,5 @@
 import { useState } from 'react';
 
-import ModalPortal from '@/components/Modal/modalPortal';
 import ThemePicker from '@/components/Modal/ThemePicker';
 import type { Info } from '@/types/info';
 
@@ -32,11 +31,7 @@ const Footer = ({ info }: Props) => {
           aria-label='themePicker'
         />
       </footer>
-      {isModalOpen && (
-        <ModalPortal>
-          <ThemePicker onClose={handleModalClose} />
-        </ModalPortal>
-      )}
+      {isModalOpen && <ThemePicker onClose={handleModalClose} />}
     </>
   );
 };
