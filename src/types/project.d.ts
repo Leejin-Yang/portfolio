@@ -1,7 +1,5 @@
-import type { StaticImageData } from 'next/image';
-
 interface Image {
-  src: StaticImageData;
+  src: string;
   alt: string;
   videoSrc?: string;
 }

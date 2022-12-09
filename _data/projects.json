@@ -1,0 +1,103 @@
+[
+  {
+    "title": "QWZD",
+    "subTitle": "피파온라인 4 전적 검색 사이트",
+    "desc": "React를 사용한 프로젝트로 백엔드와 협업하여 <strong>클라이언트 부분 100%</strong>를 개발했습니다. 구단주 검색으로 해당 구단주의 경기 별 스탯과 선수 랭킹을 확인하는 서비스입니다. 프로젝트 환경 설정부터 디자인, 개발, 배포까지의 전반적인 과정을 학습했습니다. <strong>70%의 모바일 사용자의 만족을 위해 반응형 작업</strong>을 진행했습니다. 5개월 기간동안 <strong>DAU 200에서 1000</strong>을 유지하는 서비스로 발전시켰습니다.\n기존에 JavaScript로 진행한 프로젝트를 <strong>TypeScript로 마이그레이션</strong>을 진행했습니다. 정적 타입 지원을 통해 컴파일 단계에서 오류를 잡을 수 있게 하고 팀원을 추가하는 과정에서 코드를 예측할 수 있게 했습니다. <strong>Redux Toolkit</strong>을 도입해 기존의 상태들을 전역으로 관리했습니다. 각 컴포넌트에서 구독해 기존의 props drilling을 개선해 불필요한 리렌더링을 방지했습니다.",
+    "duration": "2021.9 ~",
+    "stack": "React, TypeScript, emotion, Redux Toolkit",
+    "links": [{ "src": "https://qwzd.kr", "key": "qwzd.kr" }],
+    "imgs": [
+      {
+        "src": "/images/qwzd/main.png",
+        "alt": "qwzd-main"
+      },
+      {
+        "src": "/images/qwzd/stat.png",
+        "alt": "qwzd-stat"
+      },
+      {
+        "src": "/images/qwzd/modal.png",
+        "alt": "qwzd-modal"
+      },
+      {
+        "src": "/images/qwzd/ranking.png",
+        "alt": "qwzd-ranking"
+      }
+    ]
+  },
+  {
+    "title": "Movie App",
+    "subTitle": "영화 검색, 즐겨찾기 사이트",
+    "desc": "Open API를 이용한 영화 검색과 즐겨찾기를 등록할 수 있는 서비스입니다. 모바일 환경을 먼저 고려해 디자인 했습니다. 영화 데이터 요청은 <strong>Infinite Scroll</strong>을 이용해 구현했습니다. 즐겨찾기를 등록한 영화를 로컬 스토리지에 저장해 유지하게 했습니다. 즐겨찾기에 등록된 영화 목록 순서를 <strong>Drag & Drop</strong>으로 변경할 수 있습니다.",
+    "duration": "2022.5.10 ~ 2022.5.15",
+    "stack": "React, TypeScript, SCSS, Recoil",
+    "links": [
+      {
+        "src": "https://leejin-yang.github.io/wanted_pre_onboarding_grip",
+        "key": "movie-app.deploy"
+      },
+      {
+        "src": "https://github.com/Leejin-Yang/wanted_pre_onboarding_grip",
+        "key": "movie-app.github"
+      }
+    ],
+    "imgs": [
+      {
+        "src": "/images/movieApp/search.jpg",
+        "alt": "movie-app-search",
+        "videoSrc": "/videos/movieApp/search.mp4"
+      },
+      {
+        "src": "/images/movieApp/favorites.jpg",
+        "alt": "movie-app-favorite",
+        "videoSrc": "/videos/movieApp/favorites.mp4"
+      }
+    ]
+  },
+  {
+    "title": "Recommand",
+    "subTitle": "검색어 추천이 있는 검색창",
+    "desc": "팀 프로젝트로 진행한 공공데이터 API를 이용한 검색어 추천 기능 검색창입니다. <strong>React Query</strong>을 이용해 로컬 캐싱으로 API 호출을 최적화했습니다. 추천 검색어는 키보드로 이동할 수 있게 했고, 입력된 검색어와 일치하는 문자를 강조하는 기능을 구현했습니다.",
+    "duration": "2022.5.18 ~ 2022.5.20",
+    "stack": "React, TypeScript, SCSS, Redux Toolkit, React Query",
+    "links": [
+      { "src": "https://7b.netlify.app/", "key": "recommend.deploy" },
+      { "src": "https://github.com/Leejin-Yang/Humanscape-7B", "key": "recommend.github" }
+    ],
+    "imgs": [
+      {
+        "src": "/images/recommend/main.jpg",
+        "alt": "recommend-main",
+        "videoSrc": "/videos/recommend/main.mp4"
+      }
+    ]
+  },
+  {
+    "title": "Dashboard",
+    "subTitle": "데이터 대시보드와 광고 관리 페이지",
+    "desc": "팀 프로젝트로 진행한 대시보드입니다. 주어진 데이터를 이용해 날짜 범위에 따른 데이터를 시각화했습니다. <strong>전체 레이아웃, Date Picker, 데이터 계산 로직</strong>을 맡아 프로젝트를 진행했습니다. Victory, react-datepicker 등 다양한 라이브러리의 사용 방법을 학습했습니다.",
+    "duration": "2022.5.23 ~ 2022.5.25",
+    "stack": "React, TypeScript, SCSS, Recoil",
+    "links": [
+      { "src": "https://madup-7a.netlify.app/", "key": "dashboard.deploy" },
+      { "src": "https://github.com/Leejin-Yang/Madup-7A", "key": "dashboard.github" }
+    ],
+    "imgs": [
+      {
+        "src": "/images/dashboard/main.jpg",
+        "alt": "dashboard-main",
+        "videoSrc": "/videos/dashboard/main.mp4"
+      },
+      {
+        "src": "/images/dashboard/datepicker.jpg",
+        "alt": "dashboard-datepicker",
+        "videoSrc": "/videos/dashboard/datepicker.mp4"
+      },
+      {
+        "src": "/images/dashboard/tooltip.jpg",
+        "alt": "dashboard-tooltip",
+        "videoSrc": "/videos/dashboard/tooltip.mp4"
+      }
+    ]
+  }
+]

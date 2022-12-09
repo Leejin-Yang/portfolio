@@ -1,6 +1,6 @@
+/* eslint-disable @next/next/no-img-element */
 import 'slick-carousel/slick/slick.scss';
 import 'slick-carousel/slick/slick-theme.scss';
-import './slider.scss';
 
 import cx from 'classnames';
 import parse from 'html-react-parser';
@@ -40,7 +40,7 @@ const Article = ({ project }: Props) => {
           ))}
         </ul>
       </section>
-      {/*<div className={styles.images}>
+      <div className={styles.images}>
         <Slider dots infinite>
           {imgs.map((img) => (
             <React.Fragment key={img.alt}>
@@ -53,7 +53,7 @@ const Article = ({ project }: Props) => {
             </React.Fragment>
           ))}
         </Slider>
-      </div>*/}
+      </div>
     </article>
   );
 };

@@ -1,12 +1,16 @@
 import { useState } from 'react';
 
-import { info } from '@/assets/article';
 import ModalPortal from '@/components/Modal/modalPortal';
 import ThemePicker from '@/components/Modal/ThemePicker';
+import type { Info } from '@/types/info';
 
 import styles from './footer.module.scss';
 
-const Footer = () => {
+interface Props {
+  info: Info;
+}
+
+const Footer = ({ info }: Props) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const handleModalOpen = () => {

@@ -1,11 +1,15 @@
-import { info } from '@/assets/article';
 import ColorButtons from '@/components/ColorButtons';
 import { BACKGROUND_THEME, COLOR_THEME } from '@/constants/theme';
 import useTheme from '@/hooks/useTheme';
+import type { Info } from '@/types/info';
 
 import styles from './aside.module.scss';
 
-const Aside = () => {
+interface Props {
+  info: Info;
+}
+
+const Aside = ({ info }: Props) => {
   const { handleBackgroundTheme, handleColorTheme } = useTheme();
 
   return (
@@ -14,15 +18,15 @@ const Aside = () => {
       <p className={styles.intro}>{info.intro}</p>
       <ul className={styles.contact}>
         <li>
-          <a href='mailto:ejin1996@gmail.com'>ejin1996@gmail.com →</a>
+          <a href={`mailto:${info.mail}`}>{info.mail} →</a>
         </li>
         <li>
-          <a href='https://github.com/Leejin-Yang' target='_blank' rel='noopener noreferrer'>
+          <a href={info.github} target='_blank' rel='noopener noreferrer'>
             github@Leejin-Yang →
           </a>
         </li>
         <li>
-          <a href='https://www.instagram.com/y_horong' target='_blank' rel='noopener noreferrer'>
+          <a href={info.instagram} target='_blank' rel='noopener noreferrer'>
             instagram@y_horong →
           </a>
         </li>

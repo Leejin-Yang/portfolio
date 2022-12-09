@@ -1,11 +1,12 @@
+import Link from 'next/link';
+import { useMount } from 'react-use';
+import { useRecoilState } from 'recoil';
+
 import ColorButtons from '@/components/ColorButtons';
 import { BACKGROUND_THEME, COLOR_THEME } from '@/constants/theme';
 import useTheme from '@/hooks/useTheme';
 import { backgroundThemeMode, colorThemeMode } from '@/states/theme';
-import styles from '@/styles/pages/themeSettingPage.module.scss';
-import Link from 'next/link';
-import { useMount } from 'react-use';
-import { useRecoilState } from 'recoil';
+import styles from '@/styles/pages/index.module.scss';
 
 const App = () => {
   const [backgroundTheme] = useRecoilState(backgroundThemeMode);

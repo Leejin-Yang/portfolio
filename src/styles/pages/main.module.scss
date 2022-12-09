@@ -22,8 +22,6 @@
     display: grid;
     grid-template-columns: 300px 3fr;
     height: 100%;
-    animation-name: slidein;
-    animation-duration: 1s;
 
     .hidden {
       display: none;
@@ -41,17 +39,5 @@
         grid-template-columns: 1fr 1fr;
       }
     }
-  }
-}
-
-@keyframes slidein {
-  from {
-    width: 100%;
-    margin-left: 100%;
-  }
-
-  to {
-    width: 100%;
-    margin-left: 0%;
   }
 }

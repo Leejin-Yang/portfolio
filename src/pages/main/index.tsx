@@ -1,28 +1,48 @@
-import { dashboard, movieApp, qwzd, recommend } from '@/assets/article';
+import type { GetStaticProps } from 'next';
+
 import About from '@/components/About';
 import Article from '@/components/Article';
 import Aside from '@/components/Aside';
 import Footer from '@/components/Footer';
 import Header from '@/components/Header';
-import styles from '@/styles/pages/portfolio.module.scss';
+import { getInfo, getProjects } from '@/lib/data';
+import styles from '@/styles/pages/main.module.scss';
+import type { Info } from '@/types/info';
+import type { Project } from '@/types/project';
 
-const Portfolio = () => {
+interface Props {
+  info: Info;
+  projects: Project[];
+}
+
+const Portfolio = ({ info, projects }: Props) => {
   return (
     <div className={styles.container}>
       <Header />
-      <Aside />
+      <Aside info={info} />
       <main className={styles.main}>
         <div id='about' className={styles.hidden} aria-hidden />
-        <About />
+        <About info={info} />
         <div id='project' className={styles.hidden} aria-hidden />
-        <Article project={qwzd} />
-        <Article project={movieApp} />
-        <Article project={recommend} />
-        <Article project={dashboard} />
+        {projects?.map((project) => (
+          <Article key={project.title} project={project} />
+        ))}
       </main>
-      <Footer />
+      <Footer info={info} />
     </div>
   );
 };
 
 export default Portfolio;
+
+export const getStaticProps: GetStaticProps = async () => {
+  const info = getInfo();
+  const projects = getProjects();
+
+  return {
+    props: {
+      info,
+      projects,
+    },
+  };
+};

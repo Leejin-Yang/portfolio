@@ -1,8 +1,12 @@
-import { info } from '@/assets/article';
+import type { Info } from '@/types/info';
 
 import styles from './about.module.scss';
 
-const About = () => {
+interface Props {
+  info: Info;
+}
+
+const About = ({ info }: Props) => {
   return (
     <>
       <article className={styles.about}>
