@@ -1,1 +1,2 @@
 SASS_PATH=node_modules:src
+NEXT_PUBLIC_GA_ID=구글 애널리틱스 ID
