@@ -2,9 +2,27 @@ import '@/styles/globals.scss';
 
 import type { AppProps } from 'next/app';
 import Head from 'next/head';
+import { useRouter } from 'next/router';
+import { useEffect } from 'react';
 import { RecoilRoot } from 'recoil';
 
+import { pageView } from '@/utils/gtag';
+
 const MyApp = ({ Component, pageProps }: AppProps) => {
+  const router = useRouter();
+
+  useEffect(() => {
+    const handleRouteChange = (url: string) => {
+      pageView(url);
+    };
+
+    router.events.on('routeChangeComplete', handleRouteChange);
+
+    return () => {
+      router.events.off('routeChangeComplete', handleRouteChange);
+    };
+  }, [router.events]);
+
   return (
     <>
       <Head>
