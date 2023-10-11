@@ -5,19 +5,6 @@
   "mail": "ejin1996@gmail.com",
   "github": "https://github.com/Leejin-Yang",
   "instagram": "https://www.instagram.com/y_horong",
-  "frontend": [
-    "HTML",
-    "CSS",
-    "JavaScript",
-    "TypeScript",
-    "@",
-    "React",
-    "Redux Toolkit",
-    "Recoil",
-    "@",
-    "SCSS",
-    "Styled-Components",
-    "Emotion"
-  ],
-  "collaboration": ["Git", "Github", "Notion", "Slack", "Figma"]
+  "frontend": ["HTML", "CSS", "JavaScript", "TypeScript", "@", "React", "Next.js(v12)"],
+  "library": ["Tanstack Query", "Redux Toolkit", "Recoil", "@", "Styled-Components", "Emotion"]
 }

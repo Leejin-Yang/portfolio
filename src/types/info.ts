@@ -6,5 +6,5 @@ export interface Info {
   github: string;
   instagram: string;
   frontend: string[];
-  collaboration: string[];
+  library: string[];
 }
