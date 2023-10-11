@@ -26,9 +26,9 @@ const About = ({ info }: Props) => {
             </ul>
           </section>
           <section>
-            <h3 className={styles.subTitle}>Collaboration</h3>
+            <h3 className={styles.subTitle}>Library</h3>
             <ul className={styles.desc}>
-              {info.collaboration.map((skill) => (
+              {info.library.map((skill) => (
                 <li key={`collaboration-skills-${skill}`}>{skill}</li>
               ))}
             </ul>

@@ -7,7 +7,7 @@ import parse from 'html-react-parser';
 import React, { useMemo } from 'react';
 import Slider from 'react-slick';
 
-import type { Project } from '@/types/project.d';
+import type { Project } from '@/types/project';
 
 import styles from './article.module.scss';
 
